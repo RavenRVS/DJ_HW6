@@ -5,10 +5,9 @@ from logistic.models import Product, StockProduct, Stock
 
 def create_update_position(positions, stock):
     for i in positions:
-        print(i)
         i['stock'] = stock
-        print(i)
-        obj, created = StockProduct.objects.update_or_create(**i)
+        obj, created = StockProduct.objects.update_or_create(stock=i['stock'], product=i['product'],
+                                                             defaults={'price': i['price'], 'quantity': i['quantity']})
 
 
 class ProductSerializer(serializers.ModelSerializer):

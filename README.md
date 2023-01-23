@@ -1,6 +1,8 @@
 # Склады и товары
 
-## Техническая задача: реализовать CRUD-логику для продуктов и складов, используя Django Rest Framework.
+## Задание <a href="#doc">(Моё решение)</a>
+
+Реализовать CRUD-логику для продуктов и складов, используя Django Rest Framework.
 
 ## Описание
 
@@ -26,6 +28,8 @@ GET {{baseUrl}}/stocks/?search=помид
 Content-Type: application/json
 ```
 
+<a name="doc"></a>
+
 ## Документация по проекту
 
 Для запуска проекта необходимо:
@@ -36,7 +40,7 @@ Content-Type: application/json
 pip install -r requirements.txt
 ```
 
-Вам необходимо будет создать базу в postgres и прогнать миграции:
+Вам необходимо будет создать базу в postgres в соответствии с настройками в файле <a href="https://github.com/RavenRVS/DJ_HW6/blob/master/stocks_products/settings.py">settings.py</a> или задать свои настройки и прогнать миграции:
 
 ```base
 manage.py migrate
